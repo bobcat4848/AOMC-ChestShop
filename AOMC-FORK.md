@@ -18,8 +18,11 @@ structure initially so focused patches remain maintainable across upstream merge
 
 1. A buyer must carry sufficient valid physical Yuan in ordinary inventory.
    Character/Account bank funds never substitute automatically.
-2. Proceeds credit the shop's recorded owning Character bank, including while the
-   owner is offline or another Character is selected. The owning Minecraft account
+2. Proceeds appear as valid physical coins in the shop's recorded owning Character
+   bank, including while the owner is offline or another Character is selected.
+   Bank coins are not simultaneously a second spendable balance. Full-bank payouts
+   remain saved for later placement; cap pending payouts and pause further sales
+   before capacity is exceeded. The owning Minecraft account
    remains an authentication identity; it is not a substitute for the Character owner.
 3. Validate genuine coin/bill identities, combine supported denominations, consume
    spent notes once and issue exact valid change. A configured item template must
@@ -35,13 +38,16 @@ structure initially so focused patches remain maintainable across upstream merge
    editing or stock access.
 7. Purchases happen at registered physical storefronts. A free AOMC directory
    provides discovery and directions. The separate shared Exchange retains its
-   confirmed seller-paid 25% fee, entirely destroyed as a server sink. Physical
+   confirmed seller-paid 25% fee, rounded down to whole Yuan and entirely destroyed
+   as a server sink. Checkouts/fills of 1–3 Yuan have no Exchange fee. Physical
    player-shop sales have a confirmed 0% commission.
 8. Teleport/browse permissions cannot provide universal free warps or bypass
    active Logistics shipments, combat checks, travel scrolls or the chosen timed
    transport rules. Review upstream teleport/tag commands and default grants.
-9. Keep ordinary Vault banking semantics for unrelated plugins. Scope the new
-   physical-cash path to AOMC-ChestShop.
+9. Keep unrelated plugins' bank-funded payment semantics. Scope carried-cash-only
+   storefront checkout to AOMC-ChestShop. The unified physical item-bank conversion
+   needs its own currency-service/Vault migration; do not count stored coins and
+   a legacy numerical balance as the same value twice.
 
 ## Integration boundaries
 
@@ -74,6 +80,8 @@ Registered mission cargo is excluded.
 - A normal cash death drop preserves the bearer identities and face value. It
   cannot create a refund or bank credit for money that remained carried.
 - A 90-Yuan storefront sale credits 90 to its owner; no sale commission is taken.
+- Offline proceeds land as physical coins in the recorded Character bank; a full
+  bank cannot lose payout or create unlimited uncollected cash capacity.
 
 ## Attribution and source
 

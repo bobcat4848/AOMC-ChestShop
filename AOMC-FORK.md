@@ -35,7 +35,8 @@ structure initially so focused patches remain maintainable across upstream merge
    editing or stock access.
 7. Purchases happen at registered physical storefronts. A free AOMC directory
    provides discovery and directions. The separate shared Exchange retains its
-   chosen 25% fee; default storefront commission remains a design proposal.
+   confirmed seller-paid 25% fee, entirely destroyed as a server sink. Physical
+   player-shop sales have a confirmed 0% commission.
 8. Teleport/browse permissions cannot provide universal free warps or bypass
    active Logistics shipments, combat checks, travel scrolls or the chosen timed
    transport rules. Review upstream teleport/tag commands and default grants.
@@ -53,8 +54,10 @@ implementation.
 Default upstream owner transfers, split beneficiaries, taxes, remote purchase
 paths and ender-chest stock integrations must be reviewed before an AOMC release.
 Keep separately deposited shop and Exchange stock unless both channels share a
-single proven reservation/recovery protocol. Stockpile locality follows the
-selected commercial transport policy.
+single proven reservation/recovery protocol. Planned stockpiles feed registered
+premises or an approved local warehouse; a global bank page is not an automatic
+stockpile link. Restocking moves ordinary bankable goods into shop custody once.
+Registered mission cargo is excluded.
 
 ## Acceptance before release
 
@@ -68,6 +71,9 @@ selected commercial transport policy.
 - A forged item with unique maker/wear/upgrade data arrives unchanged.
 - Property closure or membership changes preserve unsold stock and paid entitlements.
 - Default shop teleports do not bypass the travel service or shipment restriction.
+- A normal cash death drop preserves the bearer identities and face value. It
+  cannot create a refund or bank credit for money that remained carried.
+- A 90-Yuan storefront sale credits 90 to its owner; no sale commission is taken.
 
 ## Attribution and source
 

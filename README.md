@@ -1,3 +1,13 @@
+# AOMC-ChestShop
+
+Avatar Origins MC's fork of [QuickShop-Hikari](https://github.com/QuickShop-Community/QuickShop-Hikari).
+Fork established on October 14, 2026. Upstream history, authorship and licensing are retained.
+
+The `aomc` branch currently records the adaptation requirements; physical-Yuan
+checkout and Character ownership are **not implemented or release-ready**.
+See [AOMC-FORK.md](AOMC-FORK.md) for scope and acceptance gates. The original
+upstream documentation follows below.
+
 <!-- Links -->
 
 [codacy]: https://www.codacy.com/gh/Ghost-chu/QuickShop-Hikari/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ghost-chu/QuickShop-Hikari&amp;utm_campaign=Badge_Grade
